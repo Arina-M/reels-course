@@ -11,111 +11,111 @@
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Onest:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Onest:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/main.js" defer></script>
   </head>
   <body>
 
     <!-- NAV -->
-     <header>
-        <nav>
-          <div class="nav-i">
-            <a href="#" class="nav-logo">SOFIA.REELS</a>
-            <div class="nav-links">
-              <a href="#about" data-i18n="nav.about">Про спікера</a>
-              <a href="#program" data-i18n="nav.program">Програма</a>
-              <a href="#pricing" data-i18n="nav.pricing">Тарифи</a>
-              <a href="#reviews" data-i18n="nav.reviews">Відгуки</a>
-              <a href="#faq" data-i18n="nav.faq">FAQ</a>
-            </div>
-            <div style="display:flex;align-items:center;gap:12px">
-              <div class="lang-sw">
-                <button class="on" onclick="setLang('uk')">UA</button>
-                <button onclick="setLang('en')">EN</button>
-              </div>
-              <a href="#form" class="nav-cta" data-i18n="nav.cta">Зайняти місце</a>
-              <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
-                <span></span><span></span><span></span>
-              </button>
-            </div>
+    <header>
+      <nav>
+        <div class="nav-inner">
+          <a href="#" class="nav-logo">SOFIA.REELS</a>
+          <div class="nav-links">
+            <a href="#about" data-i18n="nav.about">Про спікера</a>
+            <a href="#program" data-i18n="nav.program">Програма</a>
+            <a href="#pricing" data-i18n="nav.pricing">Тарифи</a>
+            <a href="#reviews" data-i18n="nav.reviews">Відгуки</a>
+            <a href="#faq" data-i18n="nav.faq">FAQ</a>
           </div>
-        </nav>
-        <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" onclick="closeMenu()" data-i18n="nav.about">Про спікера</a>
-        <a href="#program" onclick="closeMenu()" data-i18n="nav.program">Програма</a>
-        <a href="#pricing" onclick="closeMenu()" data-i18n="nav.pricing">Тарифи</a>
-        <a href="#reviews" onclick="closeMenu()" data-i18n="nav.reviews">Відгуки</a>
-        <a href="#faq" onclick="closeMenu()">FAQ</a>
-        <a href="#form" class="mm-cta" onclick="closeMenu()" data-i18n="nav.cta">Зайняти місце</a>
+          <div class="nav-actions">
+            <div class="language-switcher">
+              <button class="on" type="button" data-language="uk">UA</button>
+              <button type="button" data-language="en">EN</button>
+            </div>
+            <a href="#form" class="nav-cta" data-i18n="nav.cta">Зайняти місце</a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Меню">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
         </div>
-     </header>
+      </nav>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#about" data-i18n="nav.about">Про спікера</a>
+        <a href="#program" data-i18n="nav.program">Програма</a>
+        <a href="#pricing" data-i18n="nav.pricing">Тарифи</a>
+        <a href="#reviews" data-i18n="nav.reviews">Відгуки</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#form" class="mobile-nav-cta" data-i18n="nav.cta">Зайняти місце</a>
+      </div>
+    </header>
     
 
     <!-- ══ HERO ══ -->
     <section class="hero">
-      <div class="hero-split">
+      <div class="hero-layout">
 
         <!-- ── LEFT: text ── -->
-        <div class="hero-left">
-          <div class="h-badge reveal">
-            <span class="h-badge-dot"></span>
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <span class="hero-badge-dot"></span>
             <span data-i18n="hero.tag">Старт 16 червня 2025</span>
           </div>
-          <div class="h-date-row reveal" style="transition-delay:.05s">
-            <span class="h-date-num" data-i18n="hero.datenum">16</span>
-            <div class="h-date-label">
+          <div class="hero-date reveal" style="transition-delay:.05s">
+            <span class="hero-date-day" data-i18n="hero.datenum">16</span>
+            <div class="hero-date-label">
               <span data-i18n="hero.overline">ОНЛАЙН-ІНТЕНСИВ</span>
               <span data-i18n="hero.datemon">червня 2025</span>
             </div>
           </div>
           <h1>
-            <span class="h1-main reveal" style="transition-delay:.08s" data-i18n="h1main">ІНТЕ<em>НСИ</em>В</span>
-            <span class="h1-sub reveal" style="transition-delay:.13s" data-i18n="h1sub">ПО REELS</span>
+            <span class="hero-title-main reveal" style="transition-delay:.08s" data-i18n="h1main">ІНТЕНСИВ</span>
+            <span class="hero-title-sub reveal" style="transition-delay:.13s" data-i18n="h1sub">ПО REELS</span>
           </h1>
-          <p class="hero-desc reveal" style="transition-delay:.18s" data-i18n="hero.sub">
+          <p class="hero-description reveal" style="transition-delay:.18s" data-i18n="hero.sub">
             Покроковий план: як почати вести блог і перетворити Reels на <strong>реальне джерело доходу</strong> — без досвіду
           </p>
-          <div class="hero-btns reveal" style="transition-delay:.22s">
-            <a href="#form" class="btn-ac" data-i18n="hero.btn1">Зайняти місце →</a>
-            <a href="#program" class="btn-gh" data-i18n="hero.btn2">Програма</a>
+          <div class="hero-actions reveal" style="transition-delay:.22s">
+            <a href="#form" class="button-primary" data-i18n="hero.btn1">Зайняти місце →</a>
+            <a href="#program" class="button-secondary" data-i18n="hero.btn2">Програма</a>
           </div>
-          <div class="hero-stats reveal" style="transition-delay:.28s">
-            <div class="h-stat"><span class="h-stat-n">3</span><span class="h-stat-l" data-i18n="hero.s1">уроки + бонус</span></div>
-            <div class="h-stat"><span class="h-stat-n">500+</span><span class="h-stat-l" data-i18n="hero.s2">учасників</span></div>
-            <div class="h-stat"><span class="h-stat-n">×8</span><span class="h-stat-l" data-i18n="hero.s3">ріст охоплення</span></div>
+          <div class="hero-metrics reveal" style="transition-delay:.28s">
+            <div class="hero-metric"><span class="hero-metric-value">3</span><span class="hero-metric-label" data-i18n="hero.s1">уроки + бонус</span></div>
+            <div class="hero-metric"><span class="hero-metric-value">500+</span><span class="hero-metric-label" data-i18n="hero.s2">учасників</span></div>
+            <div class="hero-metric"><span class="hero-metric-value">×8</span><span class="hero-metric-label" data-i18n="hero.s3">ріст охоплення</span></div>
           </div>
         </div>
         <!-- ── RIGHT: photo element + price card ── -->
-        <div class="hero-right">
+        <div class="hero-media">
           <!-- photo as a real element, not background -->
-          <div class="hero-photo-wrap">
+          <div class="hero-photo">
             <img
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=88&fit=crop&crop=top"
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&amp;q=88&amp;fit=crop&amp;crop=top"
               alt="Спікер інтенсиву"
               loading="eager"
             >
-            <div class="hero-ig-tag">@sofia.karr</div>
-            <div class="hero-photo-accent">Sofia Karr · Спікер</div>
+            <div class="hero-social-tag">@sofia.karr</div>
+            <div class="hero-photo-caption">Sofia Karr · Спікер</div>
           </div>
           <!-- price card — hidden on mobile -->
           <div class="hero-price-card">
-            <div class="hpc-top">
-              <span class="hpc-label" data-i18n="card.label">ЩО ВХОДИТЬ</span>
-              <span class="hpc-date" data-i18n="card.date">🗓 16 червня — старт</span>
+            <div class="hero-card-header">
+              <span class="hero-card-label" data-i18n="card.label">ЩО ВХОДИТЬ</span>
+              <span class="hero-card-date" data-i18n="card.date">🗓 16 червня — старт</span>
             </div>
-            <ul class="hpc-feats">
+            <ul class="hero-card-features">
               <li data-i18n="card.f1">3 відеоуроки + бонус</li>
               <li data-i18n="card.f2">Шаблони та чеклісти</li>
               <li data-i18n="card.f3">Закрите ком'юніті</li>
               <li data-i18n="card.f4">Доступ назавжди</li>
             </ul>
-            <div class="hpc-price-row">
-              <span class="hpc-price">1 990₴</span>
-              <span class="hpc-old">3 500₴</span>
-              <span class="hpc-tag">-43%</span>
+            <div class="hero-card-price-row">
+              <span class="hero-card-price">1 990₴</span>
+              <span class="hero-card-old-price">3 500₴</span>
+              <span class="hero-card-discount">-43%</span>
             </div>
-            <a href="#form" class="hpc-btn" data-i18n="card.cta">Записатись →</a>
+            <a href="#form" class="hero-card-button" data-i18n="card.cta">Записатись →</a>
           </div>
         </div>
       </div>
@@ -123,42 +123,42 @@
 
     <!-- TICKER -->
     <div class="ticker">
-      <div class="ticker-t">
+      <div class="ticker-track">
         <span>REELS</span><span>КОНТЕНТ</span><span>ДОХІД</span><span>БЛОГ</span><span>ПРОСУВАННЯ</span><span>АЛГОРИТМИ</span><span>REELS</span><span>КОНТЕНТ</span><span>ДОХІД</span><span>БЛОГ</span><span>ПРОСУВАННЯ</span><span>АЛГОРИТМИ</span><span>REELS</span><span>КОНТЕНТ</span><span>ДОХІД</span><span>БЛОГ</span>
       </div>
     </div>
 
     <!-- ══ PHOTO STRIP "Атмосфера" ══ -->
     <section style="padding:72px 0 40px">
-      <div class="wrap">
-        <div class="s-label reveal">Атмосфера</div>
+      <div class="container">
+        <div class="section-eyebrow reveal">Атмосфера</div>
         <h2 class="reveal" style="transition-delay:.08s"><em>ЯК</em> ЦЕ ВИГЛЯДАЄ</h2>
-        <div class="photo-strip reveal" style="transition-delay:.15s">
+        <div class="gallery-grid reveal" style="transition-delay:.15s">
           <!-- big left -->
-          <div class="ps-item ps-big">
-            <div class="ps-pill">Live-сесії</div>
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&fit=crop" alt="Конференція" loading="lazy">
-            <div class="ps-cap"><span>Живі воркшопи</span></div>
+          <div class="gallery-item gallery-item-large">
+            <div class="gallery-pill">Live-сесії</div>
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&amp;q=80&amp;fit=crop" alt="Конференція" loading="lazy">
+            <div class="gallery-caption"><span>Живі воркшопи</span></div>
           </div>
           <!-- top right -->
-          <div class="ps-item">
-            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&fit=crop" alt="Зйомка Reels" loading="lazy">
-            <div class="ps-cap"><span>Зйомка Reels</span></div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&amp;q=80&amp;fit=crop" alt="Зйомка Reels" loading="lazy">
+            <div class="gallery-caption"><span>Зйомка Reels</span></div>
           </div>
           <!-- top right 2 -->
-          <div class="ps-item">
-            <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=600&q=80&fit=crop" alt="Робота з телефоном" loading="lazy">
-            <div class="ps-cap"><span>Практика</span></div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=600&amp;q=80&amp;fit=crop" alt="Робота з телефоном" loading="lazy">
+            <div class="gallery-caption"><span>Практика</span></div>
           </div>
           <!-- bottom right -->
-          <div class="ps-item">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80&fit=crop" alt="Ком'юніті" loading="lazy">
-            <div class="ps-cap"><span>Ком'юніті</span></div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&amp;q=80&amp;fit=crop" alt="Ком'юніті" loading="lazy">
+            <div class="gallery-caption"><span>Ком'юніті</span></div>
           </div>
           <!-- bottom right 2 -->
-          <div class="ps-item">
-            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80&fit=crop" alt="Команда" loading="lazy">
-            <div class="ps-cap"><span>Нетворкінг</span></div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&amp;q=80&amp;fit=crop" alt="Команда" loading="lazy">
+            <div class="gallery-caption"><span>Нетворкінг</span></div>
           </div>
         </div>
       </div>
@@ -166,31 +166,31 @@
 
     <!-- ══ ABOUT SPEAKER ══ -->
     <section id="about" style="padding:80px 0">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="about.label">Про спікера</div>
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="about.label">Про спікера</div>
         <div class="about-grid">
-          <div class="about-img-wrap reveal">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=700&q=85&fit=crop&crop=top" alt="Спікер">
+          <div class="about-photo reveal">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=700&amp;q=85&amp;fit=crop&amp;crop=top" alt="Спікер">
             <div class="about-sticker" data-i18n="about.sticker">EXPERT<br>SMM</div>
-            <div class="about-img-caption">
+            <div class="speaker-card">
               <div>
-                <div class="ac-name">Sofia Karr</div>
-                <div class="ac-sub" data-i18n="about.badge">Експерт по просуванню</div>
+                <div class="speaker-name">Sofia Karr</div>
+                <div class="speaker-role" data-i18n="about.badge">Експерт по просуванню</div>
               </div>
-              <div class="ac-ig">@sofia.karr</div>
+              <div class="speaker-social">@sofia.karr</div>
             </div>
           </div>
-          <div class="about-right reveal" style="transition-delay:.15s">
+          <div class="about-content reveal" style="transition-delay:.15s">
             <div class="about-quote" data-i18n="about.quote">
               Якщо ти <em>не знімаєш Reels</em> — ти просто віддаєш охоплення конкурентам
             </div>
             <p class="about-body" data-i18n="about.body">
               Я виросла з 0 до 120К за 8 місяців без платної реклами. Мій блог — мій основний дохід. В цьому інтенсиві я ділюсь тим, що реально працює зараз — без води і теорії.
             </p>
-            <div class="about-nums">
-              <div class="a-num"><span class="a-num-n">120K</span><span class="a-num-l" data-i18n="about.n1">підписників</span></div>
-              <div class="a-num"><span class="a-num-n">4</span><span class="a-num-l" data-i18n="about.n2">роки в SMM</span></div>
-              <div class="a-num"><span class="a-num-n">500+</span><span class="a-num-l" data-i18n="about.n3">учасників курсу</span></div>
+            <div class="about-stats">
+              <div class="about-stat"><span class="about-stat-value">120K</span><span class="about-stat-label" data-i18n="about.n1">підписників</span></div>
+              <div class="about-stat"><span class="about-stat-value">4</span><span class="about-stat-label" data-i18n="about.n2">роки в SMM</span></div>
+              <div class="about-stat"><span class="about-stat-value">500+</span><span class="about-stat-label" data-i18n="about.n3">учасників курсу</span></div>
             </div>
           </div>
         </div>
@@ -198,30 +198,30 @@
     </section>
 
     <!-- ══ FOR WHOM ══ -->
-    <section class="for-whom-section" id="for-whom">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="whom.label">Для кого</div>
+    <section class="audience-section" id="for-whom">
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="whom.label">Для кого</div>
         <h2 class="reveal" style="transition-delay:.08s"><span data-i18n="whom.h2a">КОМУ ПІДІЙДЕ</span> <em data-i18n="whom.h2b">ІНТЕНСИВ?</em></h2>
-        <div class="whom-grid reveal" style="transition-delay:.15s">
-          <div class="wc">
-            <div class="wc-num">01</div>
-            <div class="wc-title" data-i18n="whom.c1.title">Особистим блогам</div>
-            <div class="wc-text" data-i18n="whom.c1.text">Хочеш заробляти на рекламі та мати велику аудиторію</div>
+        <div class="audience-grid reveal" style="transition-delay:.15s">
+          <div class="audience-card">
+            <div class="audience-card-number">01</div>
+            <div class="audience-card-title" data-i18n="whom.c1.title">Особистим блогам</div>
+            <div class="audience-card-text" data-i18n="whom.c1.text">Хочеш заробляти на рекламі та мати велику аудиторію</div>
           </div>
-          <div class="wc wc-accent">
-            <div class="wc-num">02</div>
-            <div class="wc-title" data-i18n="whom.c2.title">Експертам</div>
-            <div class="wc-text" data-i18n="whom.c2.text">Хочеш розвинути блог і продавати через нього свої послуги</div>
+          <div class="audience-card audience-card-accent">
+            <div class="audience-card-number">02</div>
+            <div class="audience-card-title" data-i18n="whom.c2.title">Експертам</div>
+            <div class="audience-card-text" data-i18n="whom.c2.text">Хочеш розвинути блог і продавати через нього свої послуги</div>
           </div>
-          <div class="wc">
-            <div class="wc-num">03</div>
-            <div class="wc-title" data-i18n="whom.c3.title">Новачкам</div>
-            <div class="wc-text" data-i18n="whom.c3.text">Не знаєш з чого почати — проведемо від першого відео до системи</div>
+          <div class="audience-card">
+            <div class="audience-card-number">03</div>
+            <div class="audience-card-title" data-i18n="whom.c3.title">Новачкам</div>
+            <div class="audience-card-text" data-i18n="whom.c3.text">Не знаєш з чого почати — проведемо від першого відео до системи</div>
           </div>
-          <div class="wc">
-            <div class="wc-num">04</div>
-            <div class="wc-title" data-i18n="whom.c4.title">Бізнесу<br>&amp;<br>Брендам</div>
-            <div class="wc-text" data-i18n="whom.c4.text">Залучай клієнтів без великих бюджетів</div>
+          <div class="audience-card">
+            <div class="audience-card-number">04</div>
+            <div class="audience-card-title" data-i18n="whom.c4.title">Бізнесу &amp; Брендам</div>
+            <div class="audience-card-text" data-i18n="whom.c4.text">Залучай клієнтів без великих бюджетів</div>
           </div>
         </div>
       </div>
@@ -229,53 +229,53 @@
 
     <!-- ══ PROGRAM ══ -->
     <section id="program">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="prog.label">Програма</div>
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="prog.label">Програма</div>
         <h2 class="reveal" style="transition-delay:.08s"><em data-i18n="prog.h2a">ПРОГРАМА</em> <span data-i18n="prog.h2b">ІНТЕНСИВУ</span></h2>
-        <p class="s-sub reveal" style="transition-delay:.12s" data-i18n="prog.sub">Кожен урок — конкретні дії та видимий результат</p>
-        <div class="prog-grid reveal" style="transition-delay:.18s">
-          <div class="prog-row">
-            <div class="pr-num">01</div>
-            <div class="pr-content">
-              <div class="pr-title" data-i18n="prog.l1.title">Як обрати унікальну тему блогу</div>
-              <div class="pr-desc" data-i18n="prog.l1.desc">Якщо не знаєш, про що знімати і як зацікавити нових підписників — цей урок поставить все на місця</div>
+        <p class="section-subtitle reveal" style="transition-delay:.12s" data-i18n="prog.sub">Кожен урок — конкретні дії та видимий результат</p>
+        <div class="program-list reveal" style="transition-delay:.18s">
+          <div class="program-item">
+            <div class="program-number">01</div>
+            <div class="program-content">
+              <div class="program-title" data-i18n="prog.l1.title">Як обрати унікальну тему блогу</div>
+              <div class="program-description" data-i18n="prog.l1.desc">Якщо не знаєш, про що знімати і як зацікавити нових підписників — цей урок поставить все на місця</div>
             </div>
-            <div class="pr-result">
-              <div class="pr-rl" data-i18n="result">Результат</div>
-              <div class="pr-rt" data-i18n="prog.l1.result">Ти визначиш основні теми для свого блогу</div>
-            </div>
-          </div>
-          <div class="prog-row">
-            <div class="pr-num">02</div>
-            <div class="pr-content">
-              <div class="pr-title" data-i18n="prog.l2.title">Алгоритми та структура вірусного Reels</div>
-              <div class="pr-desc" data-i18n="prog.l2.desc">Як працюють алгоритми, що потрібно для охоплень і як робити відео, яке дивляться до кінця</div>
-            </div>
-            <div class="pr-result">
-              <div class="pr-rl" data-i18n="result">Результат</div>
-              <div class="pr-rt" data-i18n="prog.l2.result">Готова структура відео — застосовуй одразу</div>
+            <div class="program-result">
+              <div class="program-result-label" data-i18n="result">Результат</div>
+              <div class="program-result-text" data-i18n="prog.l1.result">Ти визначиш основні теми для свого блогу</div>
             </div>
           </div>
-          <div class="prog-row">
-            <div class="pr-num">03</div>
-            <div class="pr-content">
-              <div class="pr-title" data-i18n="prog.l3.title">Монетизація: як і скільки заробляти</div>
-              <div class="pr-desc" data-i18n="prog.l3.desc">Реклама, продаж послуг, партнерки — розберемо всі способи і побудуємо твою стратегію</div>
+          <div class="program-item">
+            <div class="program-number">02</div>
+            <div class="program-content">
+              <div class="program-title" data-i18n="prog.l2.title">Алгоритми та структура вірусного Reels</div>
+              <div class="program-description" data-i18n="prog.l2.desc">Як працюють алгоритми, що потрібно для охоплень і як робити відео, яке дивляться до кінця</div>
             </div>
-            <div class="pr-result">
-              <div class="pr-rl" data-i18n="result">Результат</div>
-              <div class="pr-rt" data-i18n="prog.l3.result">Конкретний план монетизації твого блогу</div>
+            <div class="program-result">
+              <div class="program-result-label" data-i18n="result">Результат</div>
+              <div class="program-result-text" data-i18n="prog.l2.result">Готова структура відео — застосовуй одразу</div>
             </div>
           </div>
-          <div class="prog-row pr-bonus">
-            <div class="pr-num">✦</div>
-            <div class="pr-content">
-              <div class="pr-title" data-i18n="prog.bonus.title">Бонусний урок: зйомка рутини</div>
-              <div class="pr-desc" data-i18n="prog.bonus.desc">Покроковий план зйомки — ідеально для міні-влогів</div>
+          <div class="program-item">
+            <div class="program-number">03</div>
+            <div class="program-content">
+              <div class="program-title" data-i18n="prog.l3.title">Монетизація: як і скільки заробляти</div>
+              <div class="program-description" data-i18n="prog.l3.desc">Реклама, продаж послуг, партнерки — розберемо всі способи і побудуємо твою стратегію</div>
             </div>
-            <div class="pr-result">
-              <div class="pr-rl" data-i18n="result">Результат</div>
-              <div class="pr-rt" data-i18n="prog.bonus.result">Перший відео-рутина за моєю системою</div>
+            <div class="program-result">
+              <div class="program-result-label" data-i18n="result">Результат</div>
+              <div class="program-result-text" data-i18n="prog.l3.result">Конкретний план монетизації твого блогу</div>
+            </div>
+          </div>
+          <div class="program-item program-item-bonus">
+            <div class="program-number">✦</div>
+            <div class="program-content">
+              <div class="program-title" data-i18n="prog.bonus.title">Бонусний урок: зйомка рутини</div>
+              <div class="program-description" data-i18n="prog.bonus.desc">Покроковий план зйомки — ідеально для міні-влогів</div>
+            </div>
+            <div class="program-result">
+              <div class="program-result-label" data-i18n="result">Результат</div>
+              <div class="program-result-text" data-i18n="prog.bonus.result">Перший відео-рутина за моєю системою</div>
             </div>
           </div>
         </div>
@@ -284,46 +284,46 @@
 
     <!-- ══ PRICING ══ -->
     <section class="pricing-section" id="pricing">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="price.label">Тарифи</div>
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="price.label">Тарифи</div>
         <h2 class="reveal" style="transition-delay:.08s"><em data-i18n="price.h2a">ВИБЕРИ</em> <span data-i18n="price.h2b">СВІЙ ФОРМАТ</span></h2>
-        <div class="pricing-grid reveal" style="transition-delay:.15s">
+        <div class="pricing-cards reveal" style="transition-delay:.15s">
           <div class="plan">
             <div class="plan-name" data-i18n="price.p1.name">Базовий</div>
             <div class="plan-price"><sup>₴</sup>990</div>
             <div class="plan-period" data-i18n="price.p1.period">Разовий платіж</div>
-            <ul class="plan-feats">
-              <li><span class="pf-check">✓</span><span data-i18n="price.p1.f1">3 відеоуроки</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p1.f2">Бонусний урок</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p1.f3">Доступ назавжди</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p1.f4">Шаблони та чеклісти</span></li>
+            <ul class="plan-features">
+              <li><span class="feature-check">✓</span><span data-i18n="price.p1.f1">3 відеоуроки</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p1.f2">Бонусний урок</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p1.f3">Доступ назавжди</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p1.f4">Шаблони та чеклісти</span></li>
             </ul>
-            <button class="plan-btn ob" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})" data-i18n="price.btn">Обрати план</button>
+            <button class="plan-btn is-outline" type="button" data-scroll-target="form" data-i18n="price.btn">Обрати план</button>
           </div>
           <div class="plan featured">
             <div class="plan-badge" data-i18n="price.popular">Популярний</div>
             <div class="plan-name" data-i18n="price.p2.name">Стандарт</div>
             <div class="plan-price"><sup>₴</sup>1 990</div>
             <div class="plan-period" data-i18n="price.p2.period">Разовий платіж</div>
-            <ul class="plan-feats">
-              <li><span class="pf-check">✓</span><span data-i18n="price.p2.f1">Все з Базового</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p2.f2">Закрите ком'юніті Telegram</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p2.f3">Живий Q&amp;A з куратором</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p2.f4">Розбір твого акаунту</span></li>
+            <ul class="plan-features">
+              <li><span class="feature-check">✓</span><span data-i18n="price.p2.f1">Все з Базового</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p2.f2">Закрите ком'юніті Telegram</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p2.f3">Живий Q&amp;A з куратором</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p2.f4">Розбір твого акаунту</span></li>
             </ul>
-            <button class="plan-btn ab" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})" data-i18n="price.btn">Обрати план</button>
+            <button class="plan-btn is-accent" type="button" data-scroll-target="form" data-i18n="price.btn">Обрати план</button>
           </div>
           <div class="plan">
             <div class="plan-name" data-i18n="price.p3.name">VIP</div>
             <div class="plan-price"><sup>₴</sup>3 990</div>
             <div class="plan-period" data-i18n="price.p3.period">Разовий платіж</div>
-            <ul class="plan-feats">
-              <li><span class="pf-check">✓</span><span data-i18n="price.p3.f1">Все зі Стандарту</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p3.f2">2 особисті консультації</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p3.f3">Перевірка контент-плану</span></li>
-              <li><span class="pf-check">✓</span><span data-i18n="price.p3.f4">Підтримка 30 днів</span></li>
+            <ul class="plan-features">
+              <li><span class="feature-check">✓</span><span data-i18n="price.p3.f1">Все зі Стандарту</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p3.f2">2 особисті консультації</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p3.f3">Перевірка контент-плану</span></li>
+              <li><span class="feature-check">✓</span><span data-i18n="price.p3.f4">Підтримка 30 днів</span></li>
             </ul>
-            <button class="plan-btn ob" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})" data-i18n="price.btn">Обрати план</button>
+            <button class="plan-btn is-outline" type="button" data-scroll-target="form" data-i18n="price.btn">Обрати план</button>
           </div>
         </div>
       </div>
@@ -331,93 +331,93 @@
 
     <!-- ══ REVIEWS ══ -->
     <section id="reviews">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="rev.label">Відгуки</div>
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="rev.label">Відгуки</div>
         <h2 class="reveal" style="transition-delay:.08s"><em data-i18n="rev.h2a">ЩО КАЖУТЬ</em> <span data-i18n="rev.h2b">УЧАСНИКИ</span></h2>
         <!-- stat bar -->
-        <div class="rev-stat-row reveal" style="transition-delay:.1s">
-          <div class="rev-stat-inline">
-            <span class="rev-stat-big">500+</span>
-            <span class="rev-stat-txt" data-i18n="revstat.label">Учасників вже пройшли курс</span>
+        <div class="reviews-summary reveal" style="transition-delay:.1s">
+          <div class="reviews-summary-count">
+            <span class="reviews-summary-number">500+</span>
+            <span class="reviews-summary-text" data-i18n="revstat.label">Учасників вже пройшли курс</span>
           </div>
-          <div class="rev-tags-row">
-            <span class="rst" data-i18n="revstat.t1">⭐ 4.9/5 рейтинг</span>
-            <span class="rst" data-i18n="revstat.t2">🔥 80% рекомендують</span>
-            <span class="rst">★★★★★ 500 відгуків</span>
+          <div class="reviews-tags">
+            <span class="reviews-tag" data-i18n="revstat.t1">⭐ 4.9/5 рейтинг</span>
+            <span class="reviews-tag" data-i18n="revstat.t2">🔥 80% рекомендують</span>
+            <span class="reviews-tag">★★★★★ 500 відгуків</span>
           </div>
         </div>
 
         <!-- carousel -->
-        <div class="rev-carousel-wrap reveal" style="transition-delay:.15s">
-          <div class="rev-track" id="revTrack">
+        <div class="reviews-carousel reveal" style="transition-delay:.15s">
+          <div class="reviews-track" id="reviewsTrack">
 
-            <div class="rev-card rev-big">
+            <div class="review-card review-card-featured">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text" data-i18n="rev.highlight">Найкращий курс по Reels з усіх що я проходила</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">МС</div>
-                <div><div class="rev-name" data-i18n="rev.r4.name">Марія Сидоренко</div><div class="rev-sub" data-i18n="rev.r4.sub">Косметолог, Харків</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text" data-i18n="rev.highlight">Найкращий курс по Reels з усіх що я проходила</p>
+              <div class="review-author">
+                <div class="review-avatar">МС</div>
+                <div><div class="review-name" data-i18n="rev.r4.name">Марія Сидоренко</div><div class="review-meta" data-i18n="rev.r4.sub">Косметолог, Харків</div></div>
               </div>
             </div>
 
-            <div class="rev-card">
+            <div class="review-card">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text" data-i18n="rev.r1.text">За 2 тижні після інтенсиву мій перший Reels набрав 80K переглядів. Методика реально працює!</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">АМ</div>
-                <div><div class="rev-name" data-i18n="rev.r1.name">Аліна Михайленко</div><div class="rev-sub" data-i18n="rev.r1.sub">Фітнес-тренер, Київ</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text" data-i18n="rev.r1.text">За 2 тижні після інтенсиву мій перший Reels набрав 80K переглядів. Методика реально працює!</p>
+              <div class="review-author">
+                <div class="review-avatar">АМ</div>
+                <div><div class="review-name" data-i18n="rev.r1.name">Аліна Михайленко</div><div class="review-meta" data-i18n="rev.r1.sub">Фітнес-тренер, Київ</div></div>
               </div>
             </div>
 
-            <div class="rev-card">
+            <div class="review-card">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text" data-i18n="rev.r2.text">Нарешті зрозуміла як працюють алгоритми. Підписників +2300 за місяць. Вже окупила інтенсив першою рекламою.</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">ОП</div>
-                <div><div class="rev-name" data-i18n="rev.r2.name">Оксана Петрова</div><div class="rev-sub" data-i18n="rev.r2.sub">Психолог, Одеса</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text" data-i18n="rev.r2.text">Нарешті зрозуміла як працюють алгоритми. Підписників +2300 за місяць. Вже окупила інтенсив першою рекламою.</p>
+              <div class="review-author">
+                <div class="review-avatar">ОП</div>
+                <div><div class="review-name" data-i18n="rev.r2.name">Оксана Петрова</div><div class="review-meta" data-i18n="rev.r2.sub">Психолог, Одеса</div></div>
               </div>
             </div>
 
-            <div class="rev-card">
+            <div class="review-card">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text" data-i18n="rev.r5.text">Купила з сумнівами — вже через 3 дні зрозуміла що це найкраще вкладення в цьому році.</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">ДЛ</div>
-                <div><div class="rev-name" data-i18n="rev.r5.name">Дарина Лисенко</div><div class="rev-sub" data-i18n="rev.r5.sub">Fashion-блогер, Дніпро</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text" data-i18n="rev.r5.text">Купила з сумнівами — вже через 3 дні зрозуміла що це найкраще вкладення в цьому році.</p>
+              <div class="review-author">
+                <div class="review-avatar">ДЛ</div>
+                <div><div class="review-name" data-i18n="rev.r5.name">Дарина Лисенко</div><div class="review-meta" data-i18n="rev.r5.sub">Fashion-блогер, Дніпро</div></div>
               </div>
             </div>
 
-            <div class="rev-card">
+            <div class="review-card">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text" data-i18n="rev.r3.text">Кожен урок — конкретна дія. Вже через тиждень знімаю системно і бачу ріст.</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">ВК</div>
-                <div><div class="rev-name" data-i18n="rev.r3.name">Василь Коваль</div><div class="rev-sub" data-i18n="rev.r3.sub">Підприємець, Львів</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text" data-i18n="rev.r3.text">Кожен урок — конкретна дія. Вже через тиждень знімаю системно і бачу ріст.</p>
+              <div class="review-author">
+                <div class="review-avatar">ВК</div>
+                <div><div class="review-name" data-i18n="rev.r3.name">Василь Коваль</div><div class="review-meta" data-i18n="rev.r3.sub">Підприємець, Львів</div></div>
               </div>
             </div>
 
-            <div class="rev-card">
+            <div class="review-card">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text">Ком'юніті після курсу — окремий скарб. Досі спілкуємось і обмінюємось ідеями щодня.</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">КО</div>
-                <div><div class="rev-name">Катерина Острова</div><div class="rev-sub">SMM-спеціаліст, Запоріжжя</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text">Ком'юніті після курсу — окремий скарб. Досі спілкуємось і обмінюємось ідеями щодня.</p>
+              <div class="review-author">
+                <div class="review-avatar">КО</div>
+                <div><div class="review-name">Катерина Острова</div><div class="review-meta">SMM-спеціаліст, Запоріжжя</div></div>
               </div>
             </div>
 
-            <div class="rev-card">
+            <div class="review-card">
               <div class="stars">★★★★★</div>
-              <div class="rev-quote">"</div>
-              <p class="rev-text">Я взагалі не знала що таке алгоритми — після курсу мій акаунт виріс з 200 до 4000 підписників за 6 тижнів.</p>
-              <div class="rev-reviewer">
-                <div class="rev-av">НВ</div>
-                <div><div class="rev-name">Надія Власенко</div><div class="rev-sub">Нутриціолог, Вінниця</div></div>
+              <div class="review-quote-mark">"</div>
+              <p class="review-text">Я взагалі не знала що таке алгоритми — після курсу мій акаунт виріс з 200 до 4000 підписників за 6 тижнів.</p>
+              <div class="review-author">
+                <div class="review-avatar">НВ</div>
+                <div><div class="review-name">Надія Власенко</div><div class="review-meta">Нутриціолог, Вінниця</div></div>
               </div>
             </div>
 
@@ -425,44 +425,44 @@
         </div>
 
         <!-- navigation -->
-        <div class="rev-nav">
-          <button class="rev-arrow" id="revPrev" onclick="revMove(-1)" aria-label="Назад">&#8592;</button>
-          <div class="rev-dots" id="revDots"></div>
-          <button class="rev-arrow" id="revNext" onclick="revMove(1)" aria-label="Далі">&#8594;</button>
+        <div class="reviews-nav">
+          <button class="reviews-arrow" id="reviewsPrev" type="button" data-carousel-direction="-1" aria-label="Назад">&#8592;</button>
+          <div class="reviews-dots" id="reviewsDots"></div>
+          <button class="reviews-arrow" id="reviewsNext" type="button" data-carousel-direction="1" aria-label="Далі">&#8594;</button>
         </div>
       </div>
     </section>
 
     <!-- ══ FORM ══ -->
     <section id="form" class="form-section">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="form.label">Заявка</div>
-        <div class="form-outer reveal" style="transition-delay:.1s">
-          <div class="form-photo-col">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&fit=crop" alt="Захід">
-            <div class="urgency-row">
-              <div class="urgency-dot"></div>
-              <span class="urgency-text" data-i18n="form.urgency">Залишилось 12 місць зі 100</span>
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="form.label">Заявка</div>
+        <div class="form-layout reveal" style="transition-delay:.1s">
+          <div class="form-visual">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&amp;q=80&amp;fit=crop" alt="Захід">
+            <div class="urgency-badge">
+              <div class="urgency-badge-dot"></div>
+              <span class="urgency-badge-text" data-i18n="form.urgency">Залишилось 12 місць зі 100</span>
             </div>
-            <div class="form-photo-pill" data-i18n="form.photopill">Старт 16 червня</div>
+            <div class="form-visual-pill" data-i18n="form.photopill">Старт 16 червня</div>
           </div>
-          <div class="form-col">
+          <div class="form-content">
             <h2><em data-i18n="form.h2a">ЗАЙМИ</em><br><span data-i18n="form.h2b">СВОЄ МІСЦЕ</span></h2>
-            <p class="form-col-sub" data-i18n="form.desc">Залиш заявку — ми зв'яжемось протягом години</p>
-            <form id="signupForm" onsubmit="submitForm(event)">
-              <div class="fg">
+            <p class="form-description" data-i18n="form.desc">Залиш заявку — ми зв'яжемось протягом години</p>
+            <form id="signupForm">
+              <div class="form-field">
                 <label data-i18n="form.name">Ім'я</label>
                 <input type="text" placeholder="Твоє ім'я" required>
               </div>
-              <div class="fg">
+              <div class="form-field">
                 <label data-i18n="form.phone">Телефон / Instagram</label>
                 <input type="tel" placeholder="+380 або @username">
               </div>
-              <div class="fg">
+              <div class="form-field">
                 <label>Email</label>
                 <input type="email" placeholder="your@email.com" required>
               </div>
-              <div class="fg">
+              <div class="form-field">
                 <label data-i18n="form.plan">Тариф</label>
                 <select>
                   <option data-i18n="form.plan.opt1">Базовий — 990 ₴</option>
@@ -470,10 +470,10 @@
                   <option data-i18n="form.plan.opt3">VIP — 3 990 ₴</option>
                 </select>
               </div>
-              <button type="submit" class="submit-btn" data-i18n="form.submit">Зайняти місце →</button>
+              <button type="submit" class="submit-button" data-i18n="form.submit">Зайняти місце →</button>
               <p class="form-note" data-i18n="form.note">Без спаму. Тільки корисна інформація про інтенсив.</p>
             </form>
-            <div class="success-msg" id="successMsg">
+            <div class="success-message" id="successMessage" hidden>
               <h3 data-i18n="form.success.h">Заявку прийнято! 🎉</h3>
               <p data-i18n="form.success.p">Ми зв'яжемось протягом години. Перевір пошту!</p>
             </div>
@@ -484,22 +484,22 @@
 
     <!-- ══ FAQ ══ -->
     <section id="faq">
-      <div class="wrap">
-        <div class="s-label reveal" data-i18n="faq.label">FAQ</div>
+      <div class="container">
+        <div class="section-eyebrow reveal" data-i18n="faq.label">FAQ</div>
         <h2 class="reveal" style="transition-delay:.08s"><em data-i18n="faq.h2a">ЧАСТІ</em> <span data-i18n="faq.h2b">ПИТАННЯ</span></h2>
         <div class="faq-list reveal" style="transition-delay:.15s">
-          <details><summary data-i18n="faq.q1">Підійде якщо я новачок?</summary><p class="faq-ans" data-i18n="faq.a1">Так! Від ідеї до першого опублікованого відео — покроково.</p></details>
-          <details><summary data-i18n="faq.q2">Потрібне дороге обладнання?</summary><p class="faq-ans" data-i18n="faq.a2">Ні. Достатньо смартфона.</p></details>
-          <details><summary data-i18n="faq.q3">Скільки часу на день?</summary><p class="faq-ans" data-i18n="faq.a3">40–60 хвилин уроку + 30 хвилин практики.</p></details>
-          <details><summary data-i18n="faq.q4">Якщо не можу бути на прямому ефірі?</summary><p class="faq-ans" data-i18n="faq.a4">Усі записи залишаться у тебе назавжди.</p></details>
-          <details><summary data-i18n="faq.q5">Є гарантія повернення?</summary><p class="faq-ans" data-i18n="faq.a5">Так. Після першого уроку — повертаємо без питань.</p></details>
+          <details><summary data-i18n="faq.q1">Підійде якщо я новачок?</summary><p class="faq-answer" data-i18n="faq.a1">Так! Від ідеї до першого опублікованого відео — покроково.</p></details>
+          <details><summary data-i18n="faq.q2">Потрібне дороге обладнання?</summary><p class="faq-answer" data-i18n="faq.a2">Ні. Достатньо смартфона.</p></details>
+          <details><summary data-i18n="faq.q3">Скільки часу на день?</summary><p class="faq-answer" data-i18n="faq.a3">40–60 хвилин уроку + 30 хвилин практики.</p></details>
+          <details><summary data-i18n="faq.q4">Якщо не можу бути на прямому ефірі?</summary><p class="faq-answer" data-i18n="faq.a4">Усі записи залишаться у тебе назавжди.</p></details>
+          <details><summary data-i18n="faq.q5">Є гарантія повернення?</summary><p class="faq-answer" data-i18n="faq.a5">Так. Після першого уроку — повертаємо без питань.</p></details>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <div class="wrap">
+      <div class="container">
         <div class="footer-logo">SOFIA.REELS</div>
         <div class="footer-links">
           <a href="#about" data-i18n="nav.about">Про спікера</a>
