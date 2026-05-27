@@ -214,6 +214,7 @@ nav {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 440px;
+  align-items: stretch;
   min-height: calc(100vh - 60px);
   max-width: var(--container-wide);
   margin: 0 auto;
@@ -429,6 +430,7 @@ h1 {
   padding: 40px 0 0;
   gap: 20px;
   align-items: center;
+  min-width: 0;
 }
 
 /* photo as a styled element — not background */
@@ -436,8 +438,14 @@ h1 {
   position: relative;
   border-radius: 24px 24px;
   overflow: hidden;
-  flex: 1;
+  flex: none;
+  align-self: stretch;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 5.2;
+  height: clamp(480px, calc(100vh - 260px), 680px);
   min-height: 300px;
+  max-height: 70vh;
 }
 
 .hero-photo img {
@@ -510,6 +518,8 @@ h1 {
   border-radius: 20px;
   padding: 22px 24px;
   flex-shrink: 0;
+  width: 100%;
+  max-width: 440px;
 }
 
 .hero-card-header {
@@ -661,6 +671,8 @@ h1 {
 
   .hero-photo {
     border-radius: 24px;
+    width: 370px;
+    max-width: 100%;
     min-height: auto;
     height: clamp(400px, 58vw, 600px);
     flex: none;
@@ -1019,6 +1031,7 @@ h2 em {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  align-items: center;
 }
 .about-stat-value {
   font-family: "Bebas Neue", sans-serif;
