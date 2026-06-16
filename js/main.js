@@ -537,6 +537,52 @@ function initReviewsCarousel() {
   setup();
 }
 
+function initFaqAccordion() {
+  document.querySelectorAll(".faq-list details").forEach((details) => {
+    const summary = details.querySelector("summary");
+    const answer = details.querySelector(".faq-answer");
+
+    if (!summary || !answer) return;
+
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (details.open) {
+        answer.style.height = answer.offsetHeight + "px";
+        answer.offsetHeight; // force reflow
+        answer.style.height = "0";
+        answer.style.paddingBottom = "0";
+
+        answer.addEventListener(
+          "transitionend",
+          () => {
+            details.removeAttribute("open");
+            answer.style.height = "";
+            answer.style.paddingBottom = "";
+          },
+          { once: true },
+        );
+      } else {
+        details.setAttribute("open", "");
+        const naturalHeight = answer.scrollHeight;
+        answer.style.height = "0";
+        answer.style.paddingBottom = "0";
+        answer.offsetHeight; // force reflow
+        answer.style.height = naturalHeight + "px";
+        answer.style.paddingBottom = "20px";
+
+        answer.addEventListener(
+          "transitionend",
+          () => {
+            answer.style.height = "";
+          },
+          { once: true },
+        );
+      }
+    });
+  });
+}
+
 function initRevealAnimations() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -561,6 +607,7 @@ function initPage() {
   initSignupForm();
   initReviewsCarousel();
   initRevealAnimations();
+  initFaqAccordion();
 }
 
 document.addEventListener("DOMContentLoaded", initPage);

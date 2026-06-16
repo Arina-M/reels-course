@@ -1622,27 +1622,50 @@ h2 em {
   color: var(--color-text-muted);
   letter-spacing: 0.5px;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select {
-  background: var(--color-background);
+  background-color: var(--color-background);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-small);
-  padding: 13px 16px;
+  padding: 13px 40px 13px 16px;
   font-size: 15px;
   color: var(--color-text);
   font-family: "Onest", sans-serif;
   outline: none;
   transition: border-color var(--transition-fast);
   width: 100%;
+  cursor: pointer;
 }
+
+select{
+appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888882' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
 input:focus,
 select:focus {
   border-color: var(--color-accent);
 }
 input::placeholder {
   color: var(--color-text-muted);
+}
+input::-webkit-search-cancel-button,
+input::-webkit-clear-button,
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
 }
 select option {
   background: #1a1a1a;
@@ -1735,6 +1758,8 @@ details[open] summary::after {
   font-size: 15px;
   color: var(--color-text-muted);
   line-height: 1.7;
+  overflow: hidden;
+  transition: height 0.35s ease, padding-bottom 0.35s ease;
 }
 
 /* ─── BURGER MENU ─── */
