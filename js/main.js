@@ -14,7 +14,7 @@ const i18n = {
     h1sub: "ПО REELS",
     "hero.sub":
       "Покроковий план: як почати вести блог і перетворити Reels на <strong>реальне джерело доходу</strong> — без досвіду",
-    "hero.btn1": "Зайняти місце →",
+    "hero.btn1": "Зайняти місце",
     "hero.btn2": "Програма",
     "hero.s1": "уроки + бонус",
     "hero.s2": "учасників",
@@ -24,7 +24,7 @@ const i18n = {
     "card.f2": "Шаблони та чеклісти",
     "card.f3": "Закрите ком'юніті",
     "card.f4": "Доступ назавжди",
-    "card.cta": "Записатись →",
+    "card.cta": "Записатись",
     "about.label": "Про спікера",
     "about.badge": "Експерт по просуванню",
     "about.sticker": "EXPERT SMM",
@@ -127,7 +127,7 @@ const i18n = {
     "form.plan.opt1": "Базовий — 990 ₴",
     "form.plan.opt2": "Стандарт — 1 990 ₴",
     "form.plan.opt3": "VIP — 3 990 ₴",
-    "form.submit": "Зайняти місце →",
+    "form.submit": "Зайняти місце",
     "form.note": "Без спаму. Тільки корисна інформація про інтенсив.",
     "form.success.h": "Заявку прийнято! 🎉",
     "form.success.p": "Ми зв'яжемось протягом години. Перевір пошту!",
@@ -161,7 +161,7 @@ const i18n = {
     h1sub: "START NOW",
     "hero.sub":
       "Step-by-step plan: how to start a blog and turn Reels into a <strong>real income source</strong> — no experience needed",
-    "hero.btn1": "Get a spot →",
+    "hero.btn1": "Get a spot",
     "hero.btn2": "Program",
     "hero.s1": "lessons + bonus",
     "hero.s2": "participants",
@@ -171,7 +171,7 @@ const i18n = {
     "card.f2": "Templates & checklists",
     "card.f3": "Private community",
     "card.f4": "Lifetime access",
-    "card.cta": "Sign up →",
+    "card.cta": "Sign up",
     "about.label": "Speaker",
     "about.badge": "Promotion expert",
     "about.sticker": "EXPERT SMM",
@@ -274,7 +274,7 @@ const i18n = {
     "form.plan.opt1": "Basic — ₴990",
     "form.plan.opt2": "Standard — ₴1,990",
     "form.plan.opt3": "VIP — ₴3,990",
-    "form.submit": "Get a spot →",
+    "form.submit": "Get a spot",
     "form.note": "No spam. Only useful info about the intensive.",
     "form.success.h": "Application received! 🎉",
     "form.success.p": "We'll contact you within an hour. Check your email!",
@@ -540,45 +540,10 @@ function initReviewsCarousel() {
 function initFaqAccordion() {
   document.querySelectorAll(".faq-list details").forEach((details) => {
     const summary = details.querySelector("summary");
-    const answer = details.querySelector(".faq-answer");
-
-    if (!summary || !answer) return;
-
+    if (!summary) return;
     summary.addEventListener("click", (e) => {
       e.preventDefault();
-
-      if (details.open) {
-        answer.style.height = answer.offsetHeight + "px";
-        answer.offsetHeight; // force reflow
-        answer.style.height = "0";
-        answer.style.paddingBottom = "0";
-
-        answer.addEventListener(
-          "transitionend",
-          () => {
-            details.removeAttribute("open");
-            answer.style.height = "";
-            answer.style.paddingBottom = "";
-          },
-          { once: true },
-        );
-      } else {
-        details.setAttribute("open", "");
-        const naturalHeight = answer.scrollHeight;
-        answer.style.height = "0";
-        answer.style.paddingBottom = "0";
-        answer.offsetHeight; // force reflow
-        answer.style.height = naturalHeight + "px";
-        answer.style.paddingBottom = "20px";
-
-        answer.addEventListener(
-          "transitionend",
-          () => {
-            answer.style.height = "";
-          },
-          { once: true },
-        );
-      }
+      details.toggleAttribute("open");
     });
   });
 }

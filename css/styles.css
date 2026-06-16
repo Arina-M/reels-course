@@ -369,6 +369,22 @@ h1 {
   /* transform: translateY(-2px); */
   box-shadow: var(--shadow-accent);
 }
+@keyframes arrow-nudge {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(7px); }
+}
+.button-primary::after,
+.hero-card-button::after,
+.submit-button::after {
+  content: " →";
+  display: inline-block;
+  margin-left: 5px;
+}
+.button-primary:hover::after,
+.hero-card-button:hover::after,
+.submit-button:hover::after {
+  animation: arrow-nudge 0.8s ease-in-out infinite;
+}
 
 .button-secondary {
   background: transparent;
@@ -1756,12 +1772,19 @@ details[open] summary::after {
   transform: rotate(45deg);
 }
 .faq-answer {
-  padding: 0 26px 20px;
+  display: block !important;
+  max-height: 0;
+  padding: 0 26px;
+  padding-bottom: 0;
   font-size: 15px;
   color: var(--color-text-muted);
   line-height: 1.7;
   overflow: hidden;
-  transition: height 0.35s ease, padding-bottom 0.35s ease;
+  transition: max-height 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding-bottom 0.4s ease;
+}
+details[open] .faq-answer {
+  max-height: 400px;
+  padding-bottom: 20px;
 }
 
 /* ─── BURGER MENU ─── */
