@@ -379,11 +379,13 @@ h1 {
   content: " →";
   display: inline-block;
   margin-left: 5px;
+  transition: all .3s; 
 }
 .button-primary:hover::after,
 .hero-card-button:hover::after,
 .submit-button:hover::after {
-  animation: arrow-nudge 0.8s ease-in-out infinite;
+  /* animation: arrow-nudge 0.8s ease-in-out infinite; */
+  transform: translateX(7px);
 }
 
 .button-secondary {
@@ -806,7 +808,8 @@ h1 {
 
 .ticker-track {
   display: inline-flex;
-  animation: tk 22s linear infinite;
+  animation: tk 30s linear infinite;
+  will-change: transform;
 }
 
 .ticker-track span {
