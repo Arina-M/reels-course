@@ -799,6 +799,9 @@ h1 {
     border-radius: 18px;
     margin: 28px 0 0;
   }
+  .about-stats{
+    justify-content: center;
+  }
 }
 
 /* ─── TICKER ─── */
