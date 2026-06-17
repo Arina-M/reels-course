@@ -466,7 +466,7 @@ h1 {
   width: 100%;
   max-width: 440px;
   aspect-ratio: 4 / 5.2;
-  height: clamp(480px, calc(100vh - 260px), 680px);
+  height: clamp(480px, calc(100vh - 260px), 560px);
   min-height: 300px;
   max-height: 70vh;
 }
@@ -687,8 +687,8 @@ h1 {
   .hero-media {
     order: 2;
     padding: 0;
-    gap: 0;
-    flex-direction: row;
+    gap: 24px;
+    /* flex-direction: row; */
 
   }
 
@@ -707,7 +707,7 @@ h1 {
 
   /* hide price card on tablet/mobile */
   .hero-price-card {
-    display: none;
+    /* display: none; */
   }
 
 }
@@ -718,7 +718,20 @@ h1 {
   }
 }
 
-@media (max-width: 790px) {
+/* @media (max-width: 820px) {
+  .hero-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+    .hero-content{
+    align-items: center;
+  }
+   .hero-price-card {
+    display: none;
+   }
+} */
+
+@media (max-width: 820px) {
   .hero-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -727,6 +740,10 @@ h1 {
   .hero-content{
     align-items: center;
   }
+
+  .hero-price-card {
+    display: none;
+   }
 
   .hero-description{
     text-align: center;
@@ -738,8 +755,9 @@ h1 {
 
   .hero-media{
     width: 100%;
-
+    flex-direction: row;
   }
+
 }
 
 /* ═══ HERO MOBILE 640px ═══ */
@@ -782,10 +800,13 @@ h1 {
 
   .hero-metrics {
     padding-top: 22px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .hero-metric {
-    padding-right: 20px;
+    padding: 0;
   }
 
   .hero-metric-value {
